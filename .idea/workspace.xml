@@ -2,41 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1808317d-9718-4e3d-b611-8221e3c9a380" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/auth.actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/category.actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/order.actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/product.actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/user.actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/HOC/privateroute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Input/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Category/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Home/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Home/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Orders/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Products/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Signin/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Signup/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/axios.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/auth.reducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/category.reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/order.reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/product.reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/user.reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/urlConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/category.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/category.actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/product.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/product.actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Category/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Category/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Products/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Products/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/category.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/category.reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +44,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615840922248</updated>
-      <workItem from="1615840925277" duration="1185000" />
+      <workItem from="1615840925277" duration="9861000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

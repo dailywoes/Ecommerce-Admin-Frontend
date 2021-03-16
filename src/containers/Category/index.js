@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Layout from '../../components/Layout';
 import {Container, Row, Col, Modal, Button} from 'react-bootstrap';
 import {useDispatch, useSelector} from 'react-redux';
-import {getAllCategories} from '../../actions/category.actions';
+import {getAllCategories, createCategory} from '../../actions/category.actions';
 import Input from "../../components/UI/Input";
 
 const Category = (props) => {
@@ -21,8 +21,28 @@ const Category = (props) => {
     }, [])
 
 
-    const handleClose = () => setShow(false);
+
+    const handleClose = () => {
+
+        const form = new FormData();
+
+        form.append('name', categoryName);
+        form.append('parentId', categoryParent);
+        form.append('image', categoryImage);
+        dispatch(createCategory(form));
+
+        // const cat = {
+        //     categoryName,
+        //     categoryParent,
+        //     categoryImage
+        // };
+        //
+        // console.log(cat);
+
+        setShow(false);
+    };
     const handleShow = () => setShow(true);
+
     const handleCategoryImage = (e) => {
         setCategoryImage(e.target.files[0]);
     }
@@ -85,8 +105,7 @@ const Category = (props) => {
                     <select
                         className='form-control'
                         value={categoryParent}
-                        onChange={(e) => setCategoryParent(e.target.value)
-                        }>
+                        onChange={(e) => setCategoryParent(e.target.value)}>
                         <option>select category</option>
                             {
                                 createCategoryList(category.categories).map(option =>

@@ -21,3 +21,22 @@ export const getAllCategories = () => {
         }
     }
 }
+
+export const createCategory = (form) => {
+    return async dispatch => {
+        dispatch({ type: categoryConstants.CREATE_NEW_CATEGORY_REQUEST});
+        const res = await axios.post('category/create', form);
+        if(res.status === 201){
+            dispatch({
+                type: categoryConstants.CREATE_NEW_CATEGORY_SUCCESS,
+                payload: { category: res.data.category}
+            });
+        }else{
+            dispatch({
+                type: categoryConstants.CREATE_NEW_CATEGORY_FAILURE,
+                payload: res.data.error
+            });
+        }
+        console.log(res);
+    }
+}
