@@ -1,3 +1,10 @@
+/*
+Author: John Tex
+Email: johnrteixeira@gmail.com
+Description: This is the class for processing user actions in the admin panel.
+ */
+
+//class objects
 import {userConstants} from "./constants";
 import axios from "../helpers/axios";
 

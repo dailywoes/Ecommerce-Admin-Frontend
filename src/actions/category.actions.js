@@ -1,5 +1,12 @@
-import axios from '../helpers/axios';
+/*
+Author: John Tex
+Email: johnrteixeira@gmail.com
+Description: This is the class for processing category actions in the admin panel.
+ */
+
+//class objects
 import {categoryConstants} from './constants';
+import axios from '../helpers/axios';
 
 export const getAllCategories = () => {
     return async dispatch => {

@@ -1,18 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+/*
+Author: John Tex
+Email: johnrteixeira@gmail.com
+Description: This is the index of the react project.
+ */
+
+//libraries
+import { BrowserRouter as Router } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
+import ReactDOM from 'react-dom';
+import React from 'react';
+
+//class objects
 import store from './store';
-import { BrowserRouter as Router } from 'react-router-dom';
+import App from './App';
+import './index.css';
 
 window.store = store;
 
+//This is required for all React.js projects
 ReactDOM.render(
+    //Application store is for attaching the reducers and redux middleware
     <Provider store={store}>
+        {/*Application is contained within the routing object */}
         <Router>
             <React.StrictMode>
+                {/*This is where the application begins */}
                 <App />
             </React.StrictMode>
         </Router>

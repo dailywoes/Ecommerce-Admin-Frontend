@@ -1,5 +1,13 @@
+/*
+Author: John Tex
+Email: johnrteixeira@gmail.com
+Description: This is the reducer (state manager) for authentication actions.
+ */
+
+//class objects
 import {authConstants} from "../actions/constants";
 
+//initial state for authentication
 const initState = {
     token: null,
     user: {
@@ -15,9 +23,8 @@ const initState = {
     message: ''
 };
 
-
+//this function updates state variables based on actions / requests
 export default (state = initState, action) => {
-
     console.log(action);
 
     switch (action.type) {

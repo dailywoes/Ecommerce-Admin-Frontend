@@ -1,5 +1,13 @@
+/*
+Author: John Tex
+Email: johnrteixeira@gmail.com
+Description: This is the reducer (state manager) for category actions.
+ */
+
+//class objects
 import {categoryConstants} from "../actions/constants";
 
+//initial state for categories
 const initState = {
     categories: [],
     loading: false,
@@ -34,6 +42,7 @@ const buildNewCategories = (parent, categories, category) => {
     return myCategories;
 }
 
+//this function updates state variables based on actions / requests
 export default (state = initState, action) => {
     switch (action.type) {
         case categoryConstants.GET_ALL_CATEGORIES_SUCCESS:

@@ -1,4 +1,13 @@
+/*
+Author: John Tex
+Email: johnrteixeira@gmail.com
+Description: This is the index for the home page of the admin panel.
+ */
+
+//libraries
 import React from 'react'
+
+//class objects
 import Layout from '../../components/Layout'
 import './style.css';
 

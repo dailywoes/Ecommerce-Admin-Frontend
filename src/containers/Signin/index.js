@@ -1,10 +1,20 @@
-import React, {useState, useEffect} from 'react'
-import Layout from '../../components/Layout'
+/*
+Author: John Tex
+Email: johnrteixeira@gmail.com
+Description: This is the index for the sign in page of the admin panel.
+ */
+
+//libraries
 import {Container, Form, Row, Col, Button} from 'react-bootstrap'
-import Input from "../../components/UI/Input";
-import {login} from '../../actions';
 import {useDispatch, useSelector} from 'react-redux';
+import React, {useState, useEffect} from 'react'
 import {Redirect} from 'react-router-dom';
+
+//class objects
+import Input from "../../components/UI/Input";
+import Layout from '../../components/Layout'
+import {login} from '../../actions';
+
 
 const Signin = (props) => {
 

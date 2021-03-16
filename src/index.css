@@ -1,3 +1,10 @@
+/*
+Author: John Tex
+Email: johnrteixeira@gmail.com
+Description: This is the css for the index of the project,
+             only sets font, its global to the whole project.
+ */
+
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;

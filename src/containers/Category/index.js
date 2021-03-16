@@ -1,9 +1,19 @@
-import React, {useEffect, useState} from 'react';
-import Layout from '../../components/Layout';
+/*
+Author: John Tex
+Email: johnrteixeira@gmail.com
+Description: This is the index for the category page of the admin panel.
+ */
+
+//libraries
 import {Container, Row, Col, Modal, Button} from 'react-bootstrap';
 import {useDispatch, useSelector} from 'react-redux';
+import React, {useEffect, useState} from 'react';
+
+//class objects
 import {getAllCategories, createCategory} from '../../actions/category.actions';
 import Input from "../../components/UI/Input";
+import Layout from '../../components/Layout';
+
 
 const Category = (props) => {
     const category = useSelector(state => state.category);
