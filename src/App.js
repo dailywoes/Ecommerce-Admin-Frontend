@@ -13,7 +13,7 @@ import React, {useEffect} from 'react';
 import PrivateRoute from './components/HOC/privateroute';
 import Products from './containers/Products';
 import Category from './containers/Category';
-import {isUserLoggedIn} from "./actions";
+import {getInitialData, isUserLoggedIn} from "./actions";
 import Signin from './containers/Signin';
 import Signup from './containers/Signup';
 import Orders from './containers/Orders';
@@ -30,6 +30,7 @@ function App() {
         if (!auth.authenticate) {
                 dispatch(isUserLoggedIn());
         }
+        dispatch(getInitialData());
     }, []);
 
     return (

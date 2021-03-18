@@ -5,12 +5,3 @@ Description: This is the css for the index of the home page of the
              admin panel.
  */
 
-.sidebar{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #eee;
-    padding-top: 60px;
-    box-shadow: inset 0 0 5px gray;
-}

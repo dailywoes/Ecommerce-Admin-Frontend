@@ -5,7 +5,7 @@ Description: This is the index for the category page of the admin panel.
  */
 
 //libraries
-import {Container, Row, Col, Modal, Button} from 'react-bootstrap';
+import {Container, Row, Col, Button} from 'react-bootstrap';
 import {useDispatch, useSelector} from 'react-redux';
 import React, {useEffect, useState} from 'react';
 
@@ -13,6 +13,7 @@ import React, {useEffect, useState} from 'react';
 import {getAllCategories, createCategory} from '../../actions/category.actions';
 import Input from "../../components/UI/Input";
 import Layout from '../../components/Layout';
+import Modal from '../../components/UI/Modal';
 
 
 const Category = (props) => {
@@ -25,13 +26,6 @@ const Category = (props) => {
     const [categoryImage, setCategoryImage] = useState('');
 
 
-    useEffect(() => {
-        console.log('category.js');
-        dispatch(getAllCategories());
-    }, [])
-
-
-
     const handleClose = () => {
 
         const form = new FormData();
@@ -41,13 +35,8 @@ const Category = (props) => {
         form.append('image', categoryImage);
         dispatch(createCategory(form));
 
-        // const cat = {
-        //     categoryName,
-        //     categoryParent,
-        //     categoryImage
-        // };
-        //
-        // console.log(cat);
+        setCategoryName('');
+        setCategoryParent('');
 
         setShow(false);
     };
@@ -71,9 +60,9 @@ const Category = (props) => {
     }
 
     const createCategoryList = (categories, options = []) => {
-        for(let category of categories){
-            options.push({ value: category._id, name: category.name });
-            if(category.children.length > 0){
+        for (let category of categories) {
+            options.push({value: category._id, name: category.name});
+            if (category.children.length > 0) {
                 createCategoryList(category.children, options)
             }
         }
@@ -101,39 +90,30 @@ const Category = (props) => {
                 </Row>
             </Container>
 
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Add New Category</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Input
-                        value={categoryName}
-                        placeholder={`Category Name`}
-                        onChange={(e) => setCategoryName(e.target.value)}
+            <Modal
+                show={show}
+                handleClose={handleClose}
+                modalTitle={'Add New Category'}
+            >
+                <Input
+                    value={categoryName}
+                    placeholder={`Category Name`}
+                    onChange={(e) => setCategoryName(e.target.value)}
 
-                    />
-                    <select
-                        className='form-control'
-                        value={categoryParent}
-                        onChange={(e) => setCategoryParent(e.target.value)}>
-                        <option>select category</option>
-                            {
-                                createCategoryList(category.categories).map(option =>
-                                    <option key={option.value} value={option.value}>{option.name}</option>)
-                            }
-                    </select>
+                />
+                <select
+                    className='form-control'
+                    value={categoryParent}
+                    onChange={(e) => setCategoryParent(e.target.value)}>
+                    <option>select category</option>
+                    {
+                        createCategoryList(category.categories).map(option =>
+                            <option key={option.value} value={option.value}>{option.name}</option>)
+                    }
+                </select>
 
-                    <input type='file' name='categoryImage' onChange={handleCategoryImage}/>
+                <input type='file' name='categoryImage' onChange={handleCategoryImage}/>
 
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Save Changes
-                    </Button>
-                </Modal.Footer>
             </Modal>
         </Layout>
     )
