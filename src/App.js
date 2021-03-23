@@ -17,6 +17,7 @@ import {getInitialData, isUserLoggedIn} from "./actions";
 import Signin from './containers/Signin';
 import Signup from './containers/Signup';
 import Orders from './containers/Orders';
+import NewPage from './containers/NewPage';
 import Home from './containers/Home';
 import './App.css';
 
@@ -38,6 +39,7 @@ function App() {
             <Switch>
                 {/*Private routes require an admin to be logged in to access*/}
                 <PrivateRoute path='/admin' exact component={Home}/>
+                <PrivateRoute path='/admin/page' component={NewPage}/>
                 <PrivateRoute path='/admin/products' component={Products}/>
                 <PrivateRoute path='/admin/category' component={Category}/>
                 <PrivateRoute path='/admin/orders' component={Orders}/>
